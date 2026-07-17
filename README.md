@@ -2,6 +2,9 @@
 
 A visually immersive image gallery built with pure HTML, CSS, and vanilla JavaScript — no libraries or frameworks. Features a rotating 3D carousel banner and a scroll-triggered showcase section.
 
+
+## 🚀 Demo
+[Live Demo](https://itssalman095.github.io/Crazy-3D-Image-Slider-Effects/)
 ## Features
 
 - **3D Rotating Carousel** — A CSS `transform-style: preserve-3d` carousel that continuously auto-rotates 10 images in 3D space using `rotateY` and `translateZ`.
