@@ -1,0 +1,264 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>3D CSS Carousel</title>
+    </head>
+    <body>
+        <div id="progress"></div>
+
+
+    <div class="banner">
+        <div class="slider" style="--quantity: 10"> 
+            <div class="item" style="--position: 1"><img src="https://i.pinimg.com/736x/a1/9a/98/a19a980427fa4ca9c7feeb4b87054f57.jpg" alt=""></div>
+            <div class="item" style="--position: 2"><img src="https://i.pinimg.com/736x/5e/35/e9/5e35e9ef9e71af62ebc56eb924045897.jpg" alt=""></div>
+            <div class="item" style="--position: 3"><img src="https://i.pinimg.com/736x/78/8b/0b/788b0b26fa499c5d0cd7adeb651f0f41.jpg" alt=""></div>
+            <div class="item" style="--position: 4"><img src="https://i.pinimg.com/originals/b0/0d/68/b00d6884647a00c28de465d45d5be917.png" alt=""></div>
+            <div class="item" style="--position: 5"><img src="https://i.pinimg.com/1200x/47/21/4e/47214e89f27ed331b8e6e083dff39b1b.jpg" alt=""></div>
+            <div class="item" style="--position: 6"><img src="https://i.pinimg.com/736x/61/52/d6/6152d6adcb8c0f08805ab486bcf327ba.jpg" alt=""></div>
+            <div class="item" style="--position: 7"><img src="https://i.pinimg.com/736x/37/e9/40/37e940c16655f810c4bf9143d84b34d2.jpg" alt=""></div>
+            <div class="item" style="--position: 8"><img src="https://i.pinimg.com/1200x/da/d9/65/dad965b6d2657a86f2cb7e832dc3f3b8.jpg" alt=""></div>
+            <div class="item" style="--position: 9"><img src="https://i.pinimg.com/1200x/63/e5/ee/63e5ee2cd0ae05f0e77e1164ee0c11cb.jpg" alt=""></div>
+            <div class="item" style="--position: 10"><img src="https://i.pinimg.com/736x/89/0e/9c/890e9c8d101e3f293a6ca55c490cf41d.jpg" alt=""></div>
+        </div>
+        <div class="content">
+            <h1 data-content="3D GALLERY">3D GALLERY</h1>
+            <div class="author">
+                <h2>Salman</h2>
+                <p><b>Web Design</b></p>
+                <p>I design immersive web experiences using pure CSS, HTML, and JavaScript. No libraries. Just clean, creative code.
+                    
+                </p>
+            </div>
+            <div class="model"></div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="gallery-showcase">
+        <div class="showcase-header">
+            <h2 class="showcase-title">The Collection</h2>
+            <p class="showcase-subtitle">Each image tells its own story. Scroll to explore.</p>
+        </div>
+
+        <!-- Image 1 -->
+        <div class="showcase-item" data-index="1">
+            <div class="showcase-image">
+                <img src="https://i.pinimg.com/736x/a1/9a/98/a19a980427fa4ca9c7feeb4b87054f57.jpg" alt="Mystic Forest">
+            </div>
+            <div class="showcase-text">
+                <span class="showcase-number">01</span>
+                <h3>Mystic Forest</h3>
+                <p>A journey through the enchanted woods where ancient trees whisper secrets of the past. The interplay of light and shadow creates a dreamlike atmosphere that transports you to another realm.</p>
+                <div class="showcase-tags">
+                    <span>Nature</span>
+                    <span>Fantasy</span>
+                    <span>Atmospheric</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="showcase-item reverse" data-index="2">
+            <div class="showcase-image">
+                <img src="https://i.pinimg.com/736x/5e/35/e9/5e35e9ef9e71af62ebc56eb924045897.jpg" alt="Urban Twilight">
+            </div>
+            <div class="showcase-text">
+                <span class="showcase-number">02</span>
+                <h3>Urban Twilight</h3>
+                <p>The city awakens as the sun sets, painting the skyline in hues of amber and violet. Skyscrapers stand as silent sentinels watching over the bustling streets below.</p>
+                <div class="showcase-tags">
+                    <span>Cityscape</span>
+                    <span>Night</span>
+                    <span>Modern</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="showcase-item" data-index="3">
+            <div class="showcase-image">
+                <img src="https://i.pinimg.com/736x/78/8b/0b/788b0b26fa499c5d0cd7adeb651f0f41.jpg" alt="Ocean Depths">
+            </div>
+            <div class="showcase-text">
+                <span class="showcase-number">03</span>
+                <h3>Ocean Depths</h3>
+                <p>Beneath the surface lies a world of wonder. Coral reefs burst with color while mysterious creatures glide through crystal-clear waters, untouched by time.</p>
+                <div class="showcase-tags">
+                    <span>Underwater</span>
+                    <span>Marine</span>
+                    <span>Serene</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="showcase-item reverse" data-index="4">
+            <div class="showcase-image">
+                <img src="https://i.pinimg.com/originals/b0/0d/68/b00d6884647a00c28de465d45d5be917.png" alt="Digital Horizon">
+            </div>
+            <div class="showcase-text">
+                <span class="showcase-number">04</span>
+                <h3>Digital Horizon</h3>
+                <p>Where technology meets imagination. This digital artwork explores the boundary between the real and the virtual, creating a landscape that exists only in pixels and dreams.</p>
+                <div class="showcase-tags">
+                    <span>Digital Art</span>
+                    <span>Abstract</span>
+                    <span>Futuristic</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="showcase-item" data-index="5">
+            <div class="showcase-image">
+                <img src="https://i.pinimg.com/1200x/47/21/4e/47214e89f27ed331b8e6e083dff39b1b.jpg" alt="Golden Hour">
+            </div>
+            <div class="showcase-text">
+                <span class="showcase-number">05</span>
+                <h3>Golden Hour</h3>
+                <p>The magical moment when daylight fades and everything is bathed in warm, golden light. A time of day that photographers and dreamers cherish equally.</p>
+                <div class="showcase-tags">
+                    <span>Sunset</span>
+                    <span>Warm</span>
+                    <span>Landscape</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="showcase-item reverse" data-index="6">
+            <div class="showcase-image">
+                <img src="https://i.pinimg.com/736x/61/52/d6/6152d6adcb8c0f08805ab486bcf327ba.jpg" alt="Mountain Peak">
+            </div>
+            <div class="showcase-text">
+                <span class="showcase-number">06</span>
+                <h3>Mountain Peak</h3>
+                <p>Standing tall above the clouds, the mountain peak represents the ultimate challenge. Its snow-capped summit calls to adventurers and philosophers alike.</p>
+                <div class="showcase-tags">
+                    <span>Mountains</span>
+                    <span>Adventure</span>
+                    <span>Majestic</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 7 -->
+        <div class="showcase-item" data-index="7">
+            <div class="showcase-image">
+                <img src="https://i.pinimg.com/736x/37/e9/40/37e940c16655f810c4bf9143d84b34d2.jpg" alt="Neon Nights">
+            </div>
+            <div class="showcase-text">
+                <span class="showcase-number">07</span>
+                <h3>Neon Nights</h3>
+                <p>A symphony of electric colors illuminating the darkness. Neon signs and glowing streets create a cyberpunk atmosphere that feels both nostalgic and forward-looking.</p>
+                <div class="showcase-tags">
+                    <span>Neon</span>
+                    <span>Cyberpunk</span>
+                    <span>Vibrant</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 8 -->
+        <div class="showcase-item reverse" data-index="8">
+            <div class="showcase-image">
+                <img src="https://i.pinimg.com/1200x/da/d9/65/dad965b6d2657a86f2cb7e832dc3f3b8.jpg" alt="Desert Mirage">
+            </div>
+            <div class="showcase-text">
+                <span class="showcase-number">08</span>
+                <h3>Desert Mirage</h3>
+                <p>The endless sands stretch toward the horizon, where reality and illusion blur. Ancient dunes hold stories written in wind and time, waiting to be discovered.</p>
+                <div class="showcase-tags">
+                    <span>Desert</span>
+                    <span>Minimal</span>
+                    <span>Timeless</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 9 -->
+        <div class="showcase-item" data-index="9">
+            <div class="showcase-image">
+                <img src="https://i.pinimg.com/1200x/63/e5/ee/63e5ee2cd0ae05f0e77e1164ee0c11cb.jpg" alt="Starry Canvas">
+            </div>
+            <div class="showcase-text">
+                <span class="showcase-number">09</span>
+                <h3>Starry Canvas</h3>
+                <p>The night sky unfolds like a masterpiece painted by the universe itself. Each star is a brushstroke of light, creating constellations that have guided humanity for millennia.</p>
+                <div class="showcase-tags">
+                    <span>Space</span>
+                    <span>Night Sky</span>
+                    <span>Wonder</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 10 -->
+        <div class="showcase-item reverse" data-index="10">
+            <div class="showcase-image">
+                <img src="https://i.pinimg.com/736x/89/0e/9c/890e9c8d101e3f293a6ca55c490cf41d.jpg" alt="Floral Symphony">
+            </div>
+            <div class="showcase-text">
+                <span class="showcase-number">10</span>
+                <h3>Floral Symphony</h3>
+                <p>Nature's most delicate creations come together in a harmonious display of color and fragrance. Each petal tells a story of growth, beauty, and the fleeting nature of life.</p>
+                <div class="showcase-tags">
+                    <span>Flowers</span>
+                    <span>Botanical</span>
+                    <span>Elegant</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="showcase-footer">
+            <p>End of Collection</p>
+            <a href="#" class="back-to-top">Back to Top</a>
+        </div>
+    </section>
+
+    <script>
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.showcase-item').forEach(item => {
+            observer.observe(item);
+        });
+
+        // Back to top smooth scroll
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    </body>
+    </html>
+
+
+

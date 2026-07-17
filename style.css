@@ -1,0 +1,464 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+/* this is for top line animation*/
+
+#progress{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: purple;
+    z-index: 9999;
+    transform-origin: 0 50%;
+    animation: growProgress 2s linear;
+    animation-timeline: scroll();
+}
+
+@keyframes growProgress {
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(calc((var(--position) - 1) * (360deg / var(--quantity)))) translateZ(550px);
+}
+
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 1;
+    text-align: right;
+}
+
+.banner .content h1 {
+    font-family: 'ICA Rubik', sans-serif;
+    font-size: 13.8em;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+}
+
+.banner .content h1::after {
+    position: absolute;
+    inset: 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px #d2d2d2;
+    color: transparent;
+}
+
+.banner .content .author {
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+    max-width: 280px;
+    margin-left: auto 
+
+}
+
+.author h2{
+    text-align: right;
+}
+
+
+.author p{
+    text-align: right;
+    line-height: 1.5;
+}
+
+.banner .content h2 {
+    font-size: 3em;
+}
+
+.banner .content .model {
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gallery-showcase {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 100px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.gallery-showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(to bottom, #1a1a2e, transparent);
+    pointer-events: none;
+}
+
+.showcase-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.showcase-title {
+    font-family: 'ICA Rubik', sans-serif;
+    font-size: 4em;
+    color: #e94560;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 30px rgba(233, 69, 96, 0.3);
+}
+
+.showcase-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #a0a0c0;
+    letter-spacing: 2px;
+}
+
+.showcase-item {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 100px auto;
+    gap: 60px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.6s ease;
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+.showcase-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.showcase-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(233, 69, 96, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.showcase-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.showcase-image {
+    flex: 0 0 400px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.showcase-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(233, 69, 96, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.showcase-item:hover .showcase-image::after {
+    opacity: 1;
+}
+
+.showcase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.showcase-item:hover .showcase-image img {
+    transform: scale(1.08);
+}
+
+.showcase-text {
+    flex: 1;
+    text-align: left;
+}
+
+.showcase-item.reverse .showcase-text {
+    text-align: right;
+}
+
+.showcase-number {
+    font-family: 'ICA Rubik', sans-serif;
+    font-size: 5em;
+    color: rgba(233, 69, 96, 0.15);
+    line-height: 1;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.showcase-text h3 {
+    font-family: 'ICA Rubik', sans-serif;
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.showcase-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #e94560;
+    border-radius: 2px;
+}
+
+.showcase-item.reverse .showcase-text h3::after {
+    left: auto;
+    right: 0;
+}
+
+.showcase-text p {
+    font-size: 1.1em;
+    color: #b0b0d0;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.showcase-tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.showcase-item.reverse .showcase-tags {
+    justify-content: flex-end;
+}
+
+.showcase-tags span {
+    padding: 8px 20px;
+    background: rgba(233, 69, 96, 0.15);
+    border: 1px solid rgba(233, 69, 96, 0.3);
+    border-radius: 25px;
+    font-size: 0.85em;
+    color: #e94560;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.showcase-tags span:hover {
+    background: rgba(233, 69, 96, 0.3);
+    transform: translateY(-2px);
+}
+
+.showcase-footer {
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.showcase-footer p {
+    font-family: 'ICA Rubik', sans-serif;
+    font-size: 2em;
+    color: #4a4a6a;
+    margin-bottom: 20px;
+}
+
+.back-to-top {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #e94560;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 2px solid #e94560;
+}
+
+.back-to-top:hover {
+    background: transparent;
+    color: #e94560;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 900px) {
+    .showcase-item,
+    .showcase-item.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .showcase-image {
+        flex: none;
+        width: 100%;
+        height: 250px;
+    }
+
+    .showcase-text,
+    .showcase-item.reverse .showcase-text {
+        text-align: center;
+    }
+
+    .showcase-text h3::after,
+    .showcase-item.reverse .showcase-text h3::after {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .showcase-tags,
+    .showcase-item.reverse .showcase-tags {
+        justify-content: center;
+    }
+
+    .showcase-title {
+        font-size: 2.5em;
+    }
+
+    .showcase-number {
+        font-size: 3.5em;
+    }
+
+    .showcase-text h3 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-showcase {
+        padding: 60px 15px;
+    }
+
+    .showcase-item {
+        padding: 25px;
+        margin-bottom: 60px;
+    }
+
+    .showcase-image {
+        height: 200px;
+    }
+
+    .showcase-title {
+        font-size: 2em;
+    }
+
+    .showcase-number {
+        font-size: 3em;
+    }
+
+    .showcase-text h3 {
+        font-size: 1.6em;
+    }
+
+    .showcase-text p {
+        font-size: 1em;
+    }
+}
+
+
+
